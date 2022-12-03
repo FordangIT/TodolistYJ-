@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  font-family: Quicksand;
+  background-color:	#E2E2E2;
+}
+
+
+/* Plus */
+.place{
+  position: relative;
+  top: 44rem; 
+  left: 13rem;
+  } 
