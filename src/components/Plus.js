@@ -12,6 +12,33 @@ const lotate = keyframes`
 }
 `
 
+const Submit = styled.button`
+
+`
+
+const Input = styled.input`
+ border: 1px solid #F8F9FA;
+ width: 20rem;
+ height: 3rem;
+ position: relative;
+ top: 1.5rem;
+ left: 5rem;
+ background-color: white;
+ border: 1px solid #EEF0F2;
+ font-size: 1rem;
+`
+
+const Modal = styled.div`
+    width: 500px;
+    height: 10rem;
+    background-color: #F8F9FA;
+    position: relative; 
+    top:-10.1rem; 
+    left: -13rem;
+    border-radius: 0px 0px 15px 15px ;
+    border-top: 1px solid #F8F9FA;
+    z-index: 2;
+`
 
 const Button = styled.div`
     width: 5rem;
@@ -19,6 +46,7 @@ const Button = styled.div`
     border-radius: 50%;
     background-color: #38D9A9;
     position: absolute;
+    z-index: 3;
 `
 
 const Plusbutton = styled.div`
@@ -33,6 +61,7 @@ const Plusbutton = styled.div`
         color: white;
         font-weight: 700;
         animation: cubic-bezier(0.445, 0.05, 0.55, 0.95); 
+        z-index: 4;
 `
 
 const Closebutton = styled.div`  
@@ -47,18 +76,36 @@ const Closebutton = styled.div`
         color: white;
         font-weight: 700;
         animation: ${lotate} cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+        z-index: 4;
 `
 function Plus(){
     const [state, setState] = useState(false); 
-
+    const [content, setContent] = useState(""); 
     const onClick = () =>{
         setState(!state); 
     }
 
+    const onChange = (e) => {
+        setContent(e.target.value);
+    }
+
+    const handleKeypress = (e) =>{
+        if(e.key === 'Enter'){
+            alert('성공')
+            setContent("")
+            setState(!state)
+        }
+    }
+
     return(
-        <div className="">
+        <div className="modal" data-backdrop = "static">
             <Button onClick={onClick}>
                     {state === true ? <Plusbutton>+</Plusbutton> : <Closebutton>+</Closebutton>}
+                {state === true ? (
+                <Modal onClick={e=> e.stopPropagation()}>
+                        <Input onChange = {onChange} value={content} onKeyPress={handleKeypress} placeholder={'할 일을 입력 후, Enter를 누르세요'}/>
+                </Modal>
+            ) : null}
             </Button>
        </div>
     );

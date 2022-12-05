@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Plus from "../components/Plus";
 import Date from "../components/Date";
-import Todo from "../todocomponents/Todo";
+import Todolist from "../todocomponents/Todolist";
 import Write from "../components/Write";
 
 const Wrapper = styled.div`
@@ -29,7 +29,7 @@ function Main() {
               <Plus/>
             </div>
         <Date/>
-        <Todo/>
+        <Todolist/>
       </Wrapper>
    </div>
     </>

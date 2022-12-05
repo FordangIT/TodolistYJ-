@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Todos from "./Todos";
 
 const Wrapper = styled.div`
     width: 100%;
@@ -9,11 +10,12 @@ const Wrapper = styled.div`
     background-color: white;
 `
 
-function Todo(){
+function Todolist(){
     return(
         <Wrapper>
+            <Todos></Todos>
         </Wrapper>
     );
 }
 
-export default Todo;  
+export default Todolist;  
