@@ -32,6 +32,10 @@ function Main() {
         <Todolist/>
       </Wrapper>
    </div>
+   <div className="todo">
+      <AddTodo/>
+      <Todolist />
+   </div>
     </>
   );
 }
