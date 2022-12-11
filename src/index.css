@@ -13,3 +13,7 @@
   top: 44rem; 
   left: 13rem;
   } 
+
+.box{
+  position: relative;
+}
