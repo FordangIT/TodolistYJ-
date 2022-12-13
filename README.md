@@ -1,13 +1,20 @@
 ### 투드리스트의 디자인은 https://mashup-todolist.surge.sh/ 여기서 참고했습니다!
 ### 코드는 참고하지 않아서, 많이 부족합니다!!  
 
-### 회고: 전역적인 상태관리를 사용하지 않아 애를 먹었다. 담엔 상태관리 라이브러리를 적극적으로 이용해보고 싶다.
+### 회고: 
+1. 전역적인 상태관리를 사용하지 않아 애를 먹었다. 담엔 상태관리 라이브러리를 적극적으로 이용해보고 싶다.
+2. transform, animation으로 버튼이 돌아가게 하고 싶었으나, 계속 css가 맘대로라서,,, 두개의 컴포넌트로 구현해줬다. 
+3. 컴포넌트의 이름, className이 적절하지 않다. 정말 나만 알아볼 수 있다. 
+4. css 구현하고 기능 코드를 작성했더니, 디자인이 수포로 돌아갔다. 전체적인 틀을 만들고 기능을 만들고 css를 만져야 한다. 
+5. 그래도 잘한점은, 어떻게든 해냈다는 점이다! 혼자 처음부터 끝까지 만들어본게 자랑스럽다 
+6. 또 잘한점은, 실패했지만 redux toolkit을 시도해봤다는 점이다!!
 ![Screenshot from 2022-12-13 14-58-25](https://user-images.githubusercontent.com/93567754/207238767-92acb48b-155e-427c-a8fb-425190089d00.png)
 ![Screenshot from 2022-12-13 14-58-43](https://user-images.githubusercontent.com/93567754/207238775-9aba68a3-299f-4f56-9cf8-b6369b8475c0.png)
 ![Screenshot from 2022-12-13 14-58-48](https://user-images.githubusercontent.com/93567754/207238780-f63c1b7b-03cf-4ad1-8b9c-da048931af41.png)
 ![Screenshot from 2022-12-13 14-58-56](https://user-images.githubusercontent.com/93567754/207238784-98765307-7640-461f-a8cc-046664604ee0.png)
 
-
+## 1일차 2022. 12.2
+전체적인 코드 작성
 
 ## 2일차 2022.12.3
 문제: 컴포넌트인 Date와 Plus가 계속 안나타났다. 
@@ -36,9 +43,10 @@
 
 하,,, 오늘 일단 상태들을 관리하는 방법을 고민하다 redux 라이브러리를 쭉 복습했고, 
 redux 공식 문서를 보다 redux toolkit 을 알게되었다. 
-redux toolkit으로 구현해보고자 일주일간 노력했지만 실패했다. 
 
-## 2022.12.11 일요일 
+## redux toolkit으로 구현해보고자 일주일간 노력했지만 실패했다. 
+
+## 5일차 2022.12.11 일요일 
 목표 : json server를 이용해 totolist를 구현해보고자한다. 
 일단 기본 구현은 해놨고 
 앞으로 해야하건, 
@@ -46,7 +54,7 @@ redux toolkit으로 구현해보고자 일주일간 노력했지만 실패했다
 버튼 눌렀을때 모양 이상하게 되는거 transform 
 스크롤, 
 
-## 2022.12.13 화요일 
+## 62022.12.13 화요일 
 목표 : create 할때마다, 로드되게 
 해결 : window.location.reload()
 
