@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Plus from "./components/Plus";
 import Date from "./components/Date";
 import React from "react";
+import Board from "./components/Board";
 
 const Wrapper = styled.div`
   width: 500px;
@@ -24,7 +25,7 @@ function App() {
     <>
       <Wrapper>
         <Date/>
-        <Plus/>
+          <Plus/>
       </Wrapper>
     </>
   );

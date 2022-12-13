@@ -11,9 +11,8 @@ dayjs.extend(isLeapYear); // 플러그인 등록
 dayjs.locale('ko'); // 언어 등록
 
 const Wrapper = styled.div`
-padding-bottom: 30px;
  background-color: white;
- border-bottom: 2px solid rgb(233,236,239);
+ /* border-bottom: 2px solid rgb(233,236,239); */
 `
 
 const Datecontent = styled.h1`
@@ -39,7 +38,6 @@ function Date(){
         <DayContent>
             {dayjs().format("dddd")}
         </DayContent>
-        <Count/>
         </Wrapper>
         </>
     );

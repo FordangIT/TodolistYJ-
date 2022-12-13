@@ -10,12 +10,12 @@ const CountDay = styled.span`
 
 `
 
-function Count(){
+function Count({todoList}){
     return (
       <CountDay>
-        {`할 일 2개 남음`}
+        {`오늘 할 일 ${todoList.length}개`}
       </CountDay>
     )
 }
 
-export default Count; 
+export default Count;
