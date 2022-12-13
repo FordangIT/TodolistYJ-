@@ -54,7 +54,7 @@ redux 공식 문서를 보다 redux toolkit 을 알게되었다.
 버튼 눌렀을때 모양 이상하게 되는거 transform 
 스크롤, 
 
-## 62022.12.13 화요일 
+## 6일차 2022.12.13 화요일 
 목표 : create 할때마다, 로드되게 
 해결 : window.location.reload()
 
